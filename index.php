@@ -2,7 +2,11 @@
 
 <?php
 
+$allMovies = array ();
+
 include __DIR__ . '/movie.php';
+
+
 
 $pulpFiction = new movie('Pulp Fiction', 'Eng', 1994);
 
@@ -12,12 +16,16 @@ $jackieBrown = new movie('Jackie Brown', 'Eng', 1997);
 
 var_dump($jackieBrown);
 
-$jackieBrow = null;
-
 $reservoirDogs = new movie('Reservoir Dogs', 'Eng', 1992);
 
 var_dump($reservoirDogs);
 
-$jackieBrown = new movie('Jackie Brown', 'Eng', 1997);
+$allMovies[] = ($pulpFiction);
+$allMovies[] = ($jackieBrown);
+$allMovies[] = ($reservoirDogs);
 
-var_dump($jackieBrown);
+// $allMovies[] = ($reservoirDogs);
+
+var_dump($allMovies);
+
+$jackieBrown->listYear(1997);

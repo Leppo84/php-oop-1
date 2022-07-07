@@ -19,6 +19,9 @@ class movie
         self::$number_of_movies++;
         self::$id_gen++;
         $this->movieId = self::$id_gen;
+
+        // $allMovies[] = ();
+        // return $allMovies;
     }
 
     public function __destruct()
@@ -26,5 +29,15 @@ class movie
         self::$number_of_movies--;
     }
 
-    // public function addReview($title)
+    public function listYear($input_year) {
+        if ($input_year == $this->year) {
+            echo $this->title;
+        }
+        else {
+            echo 'film non trovato';
+        }
+    }
+
+
+
 }
